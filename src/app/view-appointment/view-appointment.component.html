@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th class="h1" scope="col">Sl NO</th>
+            <th class="h2" scope="col">Name</th>
+            <th class="h3" scope="col">Address</th>
+            <th class="h4" scope="col">City</th>
+            <th class="h5" scope="col">Package</th>
+            <th class="h6"scope="col">Trainer Preference</th>
+            <th class="h7" scope="col">Phone</th>
+
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of allAppointments; index as i;">
+            <th scope="row">{{i+1}}</th>
+            <td>{{user.firstname}}</td>
+            <td>{{user.streetaddress}}</td>
+            <td>{{user.city}}</td>
+            <td>{{user.packages}}</td>
+            <td>{{user.trainerpreference}}</td>
+            <td>{{user.phonenumber}}</td>
+            <td>
+              <input type="button" class="btn btn-danger" (click) = "cancelAppointment(user.id)" value="cancel">
+            </td>
+            <td>
+              <input type="button" class="btn btn-primary" (click) = "editDetails(user.id)" value="edit">
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>
